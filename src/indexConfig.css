@@ -1,0 +1,185 @@
+/* Estilização global */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  background-color: #f4f4f9;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #2b609cea;
+  color: #fff;
+  height: 60px; /* Altura consistente */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.app-logo {
+  height: 400%; /* Ajuste proporcional ao cabeçalho */
+}
+
+.app-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+.user-info {
+  font-size: 14px;
+}
+
+
+/* Configura a página inteira */
+.config-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Cabeçalho */
+.config-header {
+  background-color: #2b609cea;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.config-header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.user-info {
+  font-size: 14px;
+}
+
+/* Conteúdo principal */
+.config-content {
+  display: flex;
+  flex: 1;
+  padding: 20px;
+  gap: 20px;
+  overflow-y: auto;
+}
+
+/* Formulário */
+.form-container {
+  flex: 1;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  margin-bottom: 15px;
+}
+
+.form-field {
+  margin-bottom: 15px;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-field input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.checkbox-group label {
+  margin-right: 15px;
+  font-weight: normal;
+}
+
+.save-button {
+  padding: 10px 20px;
+  background-color: #2b609cea;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-button:hover {
+  background-color: #003f8a;
+}
+
+/* Tabela */
+.table-container {
+  flex: 2;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-container th,
+.table-container td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.table-container th {
+  background-color: #2b609cea;
+  color: white;
+}
+
+.delete-button {
+  padding: 5px 10px;
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #c9302c;
+}
+
+.message {
+  color: #28a745;
+  margin-bottom: 15px;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #2b609cea;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 1px; /* Adiciona espaçamento ao redor */
+  position: relative; /* Para customizar posição */
+  left: 20px; /* Move o botão para longe da esquerda */
+  top: 10px; /* Ajusta a distância do topo */
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}

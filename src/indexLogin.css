@@ -1,0 +1,112 @@
+/* Configurações gerais */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f7f9fc;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contêiner principal */
+.login-container {
+  max-width: 500px;
+  margin: 50px auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+}
+
+/* Título */
+.login-container h2 {
+  font-size: 1.8rem;
+  color: #34495e;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #dfe6e9;
+  padding-bottom: 10px;
+}
+
+/* Campos do formulário */
+.login-field {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.login-field label {
+  font-size: 1rem;
+  color: #2c3e50;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.login-field input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #dcdde1;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.login-field input:focus {
+  border-color: #0984e3;
+  outline: none;
+}
+
+/* Mensagens de erro */
+.error-message {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: -10px;
+  margin-bottom: 15px;
+}
+
+/* Botões */
+.login-button, .register-button {
+  background-color: #2b609cea;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.login-button:hover, .register-button:hover {
+  background-color: #74b9ff;
+  transform: scale(1.05);
+}
+
+.login-button:active, .register-button:active {
+  background-color: #0984e3;
+  transform: scale(1);
+}
+
+/* Feedback visual para interação */
+input, .login-button, .register-button {
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+input:focus, .login-button:focus, .register-button:focus {
+  box-shadow: 0 0 10px rgba(0, 132, 243, 0.5);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .login-container {
+    padding: 20px;
+  }
+
+  .login-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .login-button, .register-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}

@@ -1,0 +1,185 @@
+
+/* Estilização global */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  background-color: #f4f4f9;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #2b609cea;
+  color: #fff;
+  height: 60px; /* Altura consistente */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.app-logo {
+  height: 400%; /* Ajuste proporcional ao cabeçalho */
+}
+
+.app-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.add-button {
+  background-color: #2b609cea;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.add-button:hover {
+  background-color: #74b9ff;
+  transform: scale(1.05);
+}
+
+.add-button:active {
+  background-color: #0984e3;
+  transform: scale(1);
+}
+
+/* Tabela de vagas */
+.table-container {
+  max-width: 100%;
+  overflow-x: auto; /* Adiciona rolagem horizontal */
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%; /* Faz a tabela ocupar toda a largura do container */
+  font-size: 13px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  min-width: 200px; /* Define a largura mínima para as colunas */
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+
+th input {
+  width: 90%;
+  padding: 5px;
+  font-size: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+/* Estilo do Popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 350px; /* Reduzida a largura */
+  max-height: 80vh; /* Define uma altura máxima de 80% da altura da tela */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  overflow-y: auto; /* Adiciona a barra de rolagem */
+}
+
+.popup-content h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #333;
+}
+
+.popup-row {
+  margin-bottom: 10px;
+}
+
+.popup-row label {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.popup-row input,
+.popup-row select,
+.popup-row .datepicker-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 11px;
+  box-sizing: border-box;
+}
+
+.popup-row input:focus,
+.popup-row select:focus,
+.popup-row .datepicker-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.popup-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.popup-actions button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.popup-actions button:hover {
+  background-color: #0056b3;
+}
+
+.popup-actions button:first-child {
+  background-color: #f44336;
+}
+
+.popup-actions button:first-child:hover {
+  background-color: #d32f2f;
+}
