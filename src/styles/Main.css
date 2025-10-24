@@ -1,0 +1,104 @@
+/* Main.css */
+body, html {
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+
+}
+
+.app-layout {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app {
+  background-color: #e0e0e0;
+
+}
+/* Cabeçalho */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 3px; /* Margens simplificadas */
+  border-radius: 5px;
+  background-color: #a73636;
+  color: #fff;
+  height: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.app-logo {
+  height: auto;
+  margin-right: 20px;
+}
+
+h3 {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: large;
+}
+
+.logout-button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #ff1a1a;
+}
+
+/* Menu à esquerda */
+.app-menu {
+  width: 50px;
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  gap: 10px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  flex: 0.3;
+  padding: 10px;
+  overflow-y: auto;
+  border-radius: 8px;
+  margin: 5px; /* Margens simplificadas */
+
+
+}
+
+.menu-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.menu-button:hover {
+  background-color: #0056b3;
+}
+
+/* Conteúdo à direita */
+.app-content {
+  flex: 2;
+  background: rgba(255, 255, 255);
+  padding: 20px;
+  overflow-y: auto; /* Adiciona scroll se o conteúdo for muito grande */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  margin: 5px; /* Margens simplificadas */
+
+
+}
+

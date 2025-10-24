@@ -1,5 +1,5 @@
 import React from 'react';
-import './indexPopup.css'; // Arquivo de estilo para o popup
+import '../styles/Popup.css'; // Arquivo de estilo para o popup
 
 function ErroPopup({ message, onClose }) {
   return (

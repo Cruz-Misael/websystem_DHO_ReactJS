@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Importando o hook para navegação
-import './indexCadastro.css';
+import '../styles/Register.css';
 import 'font-awesome/css/font-awesome.min.css'; 
 
 const API_BASE_URL = process.env.REACT_APP_API_URL;

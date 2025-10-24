@@ -1,31 +1,12 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // Importando o useNavigate
-import './indexBI.css';
-import { FaArrowLeft } from 'react-icons/fa'; // Ícone de seta para voltar
-import logo from './logo.png';
+import '../styles/PowerBI.css';
+import logo from '../assets/logo.png';
 
 const API_BASE_URL = process.env.REACT_APP_API_URL;
 
 const BI = ({ userEmail }) => {
-  const navigate = useNavigate(); // Usando o hook useNavigate
-
-  const handleBack = () => {
-    navigate('/'); // Redireciona para a tela inicial
-  };
-
   return (
     <div className="app-container">
-
-      <header className="app-header">
-        <img src={logo} alt="Logo" className="app-logo" />
-        <h1 className="app-title">Power BI - Quadros DHO</h1>
-        <div className="user-info">Bem-vindo, {userEmail}</div>
-      </header>
-
-      <button className="back-button" onClick={handleBack}>
-        <FaArrowLeft /> Voltar
-      </button>
-      
       <main className="cards-grid">
         <div className="card">
           <h2>DHO - Desligamentos</h2>

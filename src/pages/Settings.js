@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'; // Para navegar entre páginas
 import { FaArrowLeft } from 'react-icons/fa'; // Ícone de seta para voltar
-import './indexConfig.css';
-import logo from './logo.png';
+import '../styles/Settings.css';
+import logo from '../assets/logo.png';
 
 const API_BASE_URL = process.env.REACT_APP_API_URL;
 
@@ -35,7 +35,6 @@ const ConfigPage = ({ userEmail }) => {
 
     try {
       await axios.post(`${API_BASE_URL}/users`, {
-        name,
         email,
         accessLevel,
       });
@@ -63,26 +62,9 @@ const ConfigPage = ({ userEmail }) => {
 
   return (
     <div className="config-page-container">
-      <header className="app-header">
-        <img src={logo} alt="Logo" className="app-logo" />
-        <h1 className="app-title">Configurações de Usuários</h1>
-        <div className="user-info">Bem-vindo, {userEmail}</div>
-      </header>
-      <button className="back-button" onClick={handleBack}>
-        <FaArrowLeft /> Voltar
-      </button>
       <div className="config-content">
         <div className="form-container">
           <h2>Informações Pessoais:</h2>
-          <div className="form-field">
-            <label>Nome:</label>
-            <input
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              placeholder="Digite o nome do usuário..."
-            />
-          </div>
           <div className="form-field">
             <label>Email:</label>
             <input
@@ -127,7 +109,6 @@ const ConfigPage = ({ userEmail }) => {
           <table>
             <thead>
               <tr>
-                <th>Nome</th>
                 <th>Email</th>
                 <th>Acesso</th>
                 <th>Excluir</th>
@@ -135,8 +116,7 @@ const ConfigPage = ({ userEmail }) => {
             </thead>
             <tbody>
               {users.map((user) => (
-                <tr key={user.id}>
-                  <td>{user.name}</td>
+                <tr key={user.id}>,3
                   <td>{user.email}</td>
                   <td>{user.accessLevel}</td>
                   <td>

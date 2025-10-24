@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Importando o hook para navegação
-import './indexLogin.css';
+import '../styles/Login.css';
 
 const API_BASE_URL = process.env.REACT_APP_API_URL;
 
@@ -12,6 +12,7 @@ function LoginPage({ onLogin }) {
   const navigate = useNavigate(); // Hook para navegação
 
   const handleLogin = async () => {
+    console.log(email, password)
     try {
       const response = await fetch(`${API_BASE_URL}/login`, {
         method: 'POST',
@@ -19,19 +20,20 @@ function LoginPage({ onLogin }) {
         body: JSON.stringify({ email, password }),
       });
 
-      const data = await response.json(); 
-
+      const text = await response.text();
+  
+      const data = JSON.parse(text); // Tenta parsear depois
       if (data.success) {
-        console.log("Chamando onLogin com:", data.accessLevel); 
-        onLogin(email, data.accessLevel); 
+        console.log("Chamando onLogin com:", data.accessLevel);
+        onLogin(email, data.accessLevel);
       } else {
-        setErrorMessage(data.message); 
+        setErrorMessage(data.message);
       }
     } catch (err) {
-      console.error(err);
-      setErrorMessage('Erro ao conectar ao servidor.');
+      console.error("Erro na requisição:", err.message);
+      setErrorMessage(`Erro ao conectar ao servidor: ${err.message}`);
     }
-  };  
+  };
 
   const handleRegister = () => {
     // Navega para a página de cadastro

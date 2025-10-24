@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Funcional() {
+function Functional() {
   return (
     <div>
       <h1>Bem-vindo ao Quadro Funcional</h1>
@@ -8,4 +8,4 @@ function Funcional() {
   );
 }
 
-export default Funcional;
+export default Functional;
