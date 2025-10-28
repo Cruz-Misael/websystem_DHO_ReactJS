@@ -35,7 +35,7 @@ function MainPage({ userEmail, accessLevel, onAccessDenied }) {
                 <button className="menu-button" onClick={() => handleNavigation('funcional')}>Quadro Funcional</button>
                 <button className="menu-button" onClick={() => handleNavigation('recrutamento')}>Quadro Recrutamento</button>
                 <button className="menu-button" onClick={() => handleNavigation('vagas')}>Painel de Vagas</button>
-                <button className="menu-button" onClick={() => handleNavigation('dp')}>Quadro DP</button>
+                <button className="menu-button" onClick={() => handleNavigation('dp')}>Integração Colaboradores</button>
                 <button className="menu-button" onClick={() => handleNavigation('config', true)}>Configurações</button>
             </nav>
 

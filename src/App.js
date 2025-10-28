@@ -14,7 +14,7 @@ import CadastroPage from './pages/Register';
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(true);
   const [userEmail, setUserEmail] = useState('teste@teste.com');
-  const [accessLevel, setAccessLevel] = useState('');
+  const [accessLevel, setAccessLevel] = useState('ADMIN');
   const [showErrorPopup, setShowErrorPopup] = useState(false);
 
   const handleLogin = (email, accessLevel) => {
